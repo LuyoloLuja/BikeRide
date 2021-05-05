@@ -17,7 +17,7 @@ public class BicycleTest {
         RoadBike roadBike = new RoadBike();
         roadBike.accelerate();
         roadBike.brake();
-        assertEquals(6, roadBike.currentSpeed());
+        assertEquals(7, roadBike.currentSpeed());
     }
     @Test
     public void roadBikeShouldDoMultipleAcceleratesCorrectly(){
@@ -36,7 +36,7 @@ public class BicycleTest {
         roadBike.brake();
         roadBike.accelerate();
         roadBike.brake();
-        assertEquals(12, roadBike.currentSpeed());
+        assertEquals(14, roadBike.currentSpeed());
     }
     @Test
     public void roadBikeShouldBeAbleToStop(){
@@ -53,14 +53,14 @@ public class BicycleTest {
     public void mountainBikeShouldAccelerate() {
         MountainBike mountainBike = new MountainBike();
         mountainBike.accelerate();
-        assertEquals(4, mountainBike.currentSpeed());
+        assertEquals(5, mountainBike.currentSpeed());
     }
     @Test
     public void mountainBikeShouldAccelerateAndBreakCorrectly() {
         MountainBike mountainBike = new MountainBike();
         mountainBike.accelerate();
         mountainBike.brake();
-        assertEquals(1, mountainBike.currentSpeed());
+        assertEquals(2, mountainBike.currentSpeed());
     }
     @Test
     public void mountainBikeShouldDoMultipleAcceleratesCorrectly(){
@@ -70,7 +70,7 @@ public class BicycleTest {
         mountainBike.accelerate();
         mountainBike.accelerate();
         mountainBike.accelerate();
-        assertEquals(20, mountainBike.currentSpeed());
+        assertEquals(25, mountainBike.currentSpeed());
     }
     @Test
     public void mountainBikeShouldDoMultipleAccelerateAndBrakesCorrectly() {
@@ -79,7 +79,7 @@ public class BicycleTest {
         mountainBike.brake();
         mountainBike.accelerate();
         mountainBike.brake();
-        assertEquals(2, mountainBike.currentSpeed());
+        assertEquals(4, mountainBike.currentSpeed());
     }
     @Test
     public void mountainBikeShouldBeAbleToStop(){
