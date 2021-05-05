@@ -1,10 +1,12 @@
 package bicycles.models;
 
-public class RoadBike {
+import bicycles.Bicycle;
+
+public class RoadBike implements Bicycle {
     int speed;
 
-    public int accelerate(){ return speed += 11; }
-    public int brake(){ return speed -= 5; }
+    public void accelerate(){ speed += 11; }
+    public void brake(){ speed -= 5; }
     public int currentSpeed(){ return speed; }
-    public int stop(){ return speed = 0; }
+    public void stop(){ speed = 0; }
 }

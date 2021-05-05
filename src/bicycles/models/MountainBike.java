@@ -1,11 +1,13 @@
 package bicycles.models;
 
-public class MountainBike {
+import bicycles.Bicycle;
+
+public class MountainBike implements Bicycle {
     int speed;
 
-    public int accelerate(){ return speed += 4; }
-    public int brake(){ return speed -= 3; }
+    public void accelerate(){ speed += 4; }
+    public void brake(){ speed -= 3; }
     public int currentSpeed(){ return speed; }
-    public int stop(){ return speed = 0; }
+    public void stop(){ speed = 0; }
 
 }
