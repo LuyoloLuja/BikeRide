@@ -48,7 +48,7 @@ public class BicycleTest {
         assertEquals(0, roadBike.currentSpeed());
     }
 
-//    Mountain Bike Tests
+//    Mountain Bike Tests ----------------------
     @Test
     public void mountainBikeShouldAccelerate() {
         MountainBike mountainBike = new MountainBike();
@@ -89,5 +89,48 @@ public class BicycleTest {
         mountainBike.accelerate();
         mountainBike.stop();
         assertEquals(0, mountainBike.currentSpeed());
+    }
+
+//  Tandem Bike Tests -------------
+    @Test
+    public void tandemShouldAccelerate() {
+        Tandem tandem = new Tandem();
+        tandem.accelerate();
+        assertEquals(12, tandem.currentSpeed());
+    }
+    @Test
+    public void tandemShouldAccelerateAndBreakCorrectly() {
+        Tandem tandem = new Tandem();
+        tandem.accelerate();
+        tandem.brake();
+        assertEquals(5, tandem.currentSpeed());
+    }
+    @Test
+    public void tandemShouldDoMultipleAcceleratesCorrectly(){
+        Tandem tandem = new Tandem();
+        tandem.accelerate();
+        tandem.accelerate();
+        tandem.accelerate();
+        tandem.accelerate();
+        tandem.accelerate();
+        assertEquals(60, tandem.currentSpeed());
+    }
+    @Test
+    public void tandemShouldDoMultipleAccelerateAndBrakesCorrectly() {
+        Tandem tandem = new Tandem();
+        tandem.accelerate();
+        tandem.brake();
+        tandem.accelerate();
+        tandem.brake();
+        assertEquals(10, tandem.currentSpeed());
+    }
+    @Test
+    public void tandemShouldBeAbleToStop(){
+        Tandem tandem = new Tandem();
+        tandem.accelerate();
+        tandem.brake();
+        tandem.accelerate();
+        tandem.stop();
+        assertEquals(0, tandem.currentSpeed());
     }
 }
