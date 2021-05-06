@@ -1,13 +1,10 @@
 package bicycles.models;
 
-import bicycles.Bicycle;
+import bicycles.BicycleBase;
 
-public class MountainBike implements Bicycle {
-    int speed;
+public class MountainBike extends BicycleBase {
 
-    public void accelerate(){ speed += 5; }
-    public void brake(){ speed -= 3; }
-    public int currentSpeed(){ return speed; }
-    public void stop(){ speed = 0; }
+    public void accelerate(){ changeSpeed(5); }
+    public void brake(){ changeSpeed(-3); }
 
 }
