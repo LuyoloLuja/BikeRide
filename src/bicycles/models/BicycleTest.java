@@ -2,6 +2,7 @@ package bicycles.models;
 
 import bicycles.Bicycle;
 import bicycles.Rides.BikeRideOne;
+import bicycles.Rides.BikeRideThree;
 import bicycles.Rides.BikeRideTwo;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.commons.util.ModuleUtils;
@@ -189,4 +190,7 @@ public class BicycleTest {
         bikeRideTwo.ride(tandem);
         assertEquals(65, bikeRideTwo.getCurrentSpeed());
     }
+
+//    Bike Ride Three Tests
+//    TO DO --- ADD TESTS FOR BIKE RIDE THREE
 }
