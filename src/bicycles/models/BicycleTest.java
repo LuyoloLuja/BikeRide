@@ -191,6 +191,29 @@ public class BicycleTest {
         assertEquals(65, bikeRideTwo.getCurrentSpeed());
     }
 
-//    Bike Ride Three Tests
-//    TO DO --- ADD TESTS FOR BIKE RIDE THREE
+//    Bike Ride Three Tests -------------------
+    @Test
+    public void bikeRideThreeShouldBeMountainBike(){
+        MountainBike mountainBike = new MountainBike();
+        BikeRideThree bikeRideThree = new BikeRideThree(mountainBike);
+
+        bikeRideThree.ride(mountainBike);
+        assertEquals(72, bikeRideThree.getCurrentSpeed());
+    }
+    @Test
+    public void bikeRideThreeShouldBeRoadBike(){
+        RoadBike roadBike = new RoadBike();
+        BikeRideThree bikeRideThree = new BikeRideThree(roadBike);
+
+        bikeRideThree.ride(roadBike);
+        assertEquals(161, bikeRideThree.getCurrentSpeed());
+    }
+    @Test
+    public void bikeRideThreeShouldBeTandem() {
+        Tandem tandem = new Tandem();
+        BikeRideThree bikeRideThree = new BikeRideThree(tandem);
+
+        bikeRideThree.ride(tandem);
+        assertEquals(173, bikeRideThree.getCurrentSpeed());
+    }
 }
