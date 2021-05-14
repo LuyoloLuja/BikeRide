@@ -221,13 +221,32 @@ public class BicycleTest {
     }
 
 //    Tests For Bicycle Specifications
+//    Bike Ride One
     @Test
-    public void bikeRideSpecShouldBeRoadBike() {
+    public void bikeRideOneSpecShouldBeRoadBike() {
         BicycleSpecification roadBikeSpec = new BicycleSpecification(11, -4);
-        Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
-        BikeRide bikeRide = new BikeRideOne(roadBike);
+        Bicycle roadBikeFromSpec = new BicycleFromSpec(roadBikeSpec);
+        BikeRide bikeRideOne = new BikeRideOne(roadBikeFromSpec);
 
-        bikeRide.ride(roadBike);
-        assertEquals(roadBike.currentSpeed(), 33);
+        bikeRideOne.ride(roadBikeFromSpec);
+        assertEquals(roadBikeFromSpec.currentSpeed(), 33);
+    }
+    @Test
+    public void bikeRideOneSpecShouldBeMountainBike() {
+        BicycleSpecification mountainBikeSpec = new BicycleSpecification(5, -3);
+        Bicycle mountainBikeFromSpec = new BicycleFromSpec(mountainBikeSpec);
+        BikeRide bikeRideOne = new BikeRideOne(mountainBikeFromSpec);
+
+        bikeRideOne.ride(mountainBikeFromSpec);
+        assertEquals(mountainBikeFromSpec.currentSpeed(), 15);
+    }
+    @Test
+    public void bikeRideOneSpecShouldBeTandem() {
+        BicycleSpecification tandemSpec = new BicycleSpecification(12, -7);
+        Bicycle tandemFromSpec = new BicycleFromSpec(tandemSpec);
+        BikeRide bikeRideOne = new BikeRideOne(tandemFromSpec);
+
+        bikeRideOne.ride(tandemFromSpec);
+        assertEquals(tandemFromSpec.currentSpeed(), 36);
     }
 }
