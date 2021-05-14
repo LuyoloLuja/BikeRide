@@ -249,4 +249,62 @@ public class BicycleTest {
         bikeRideOne.ride(tandemFromSpec);
         assertEquals(tandemFromSpec.currentSpeed(), 36);
     }
+
+//    Bike Ride Two
+    @Test
+    public void bikeRideTwoSpecShouldBeRoadBike() {
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, -4);
+        Bicycle roadBikeFromSpec = new BicycleFromSpec(bicycleSpecification);
+        BikeRide bikeRideTwo = new BikeRideTwo(roadBikeFromSpec);
+
+        bikeRideTwo.ride(roadBikeFromSpec);
+        assertEquals(roadBikeFromSpec.currentSpeed(), 66);
+    }
+    @Test
+    public void bikeRideTwoSpecShouldBeMountainBike() {
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, -3);
+        Bicycle mountainBikeFromSpec = new BicycleFromSpec(bicycleSpecification);
+        BikeRide bikeRideTwo = new BikeRideTwo(mountainBikeFromSpec);
+
+        bikeRideTwo.ride(mountainBikeFromSpec);
+        assertEquals(mountainBikeFromSpec.currentSpeed(), 30);
+    }
+    @Test
+    public void bikeRideTwoSpecShouldBeTandem() {
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, -4);
+        Bicycle tandemBikeFromSpec = new BicycleFromSpec(bicycleSpecification);
+        BikeRide bikeRideTwo = new BikeRideTwo(tandemBikeFromSpec);
+
+        bikeRideTwo.ride(tandemBikeFromSpec);
+        assertEquals(tandemBikeFromSpec.currentSpeed(), 72);
+    }
+
+//    Bike Ride Three
+    @Test
+    public void bikeRideThreeSpecShouldBeRoadBike() {
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(11, -4);
+        Bicycle roadBikeFromSpec = new BicycleFromSpec(bicycleSpecification);
+        BikeRide bikeRideThree = new BikeRideTwo(roadBikeFromSpec);
+
+        bikeRideThree.ride(roadBikeFromSpec);
+        assertEquals(roadBikeFromSpec.currentSpeed(), 66);
+    }
+    @Test
+    public void bikeRideThreeSpecShouldBeMountainBike() {
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(5, -3);
+        Bicycle mountainBikeFromSpec = new BicycleFromSpec(bicycleSpecification);
+        BikeRide bikeRideThree = new BikeRideTwo(mountainBikeFromSpec);
+
+        bikeRideThree.ride(mountainBikeFromSpec);
+        assertEquals(mountainBikeFromSpec.currentSpeed(), 30);
+    }
+    @Test
+    public void bikeRideThreeSpecShouldBeTandem() {
+        BicycleSpecification bicycleSpecification = new BicycleSpecification(12, -4);
+        Bicycle tandemBikeFromSpec = new BicycleFromSpec(bicycleSpecification);
+        BikeRide bikeRideThree = new BikeRideTwo(tandemBikeFromSpec);
+
+        bikeRideThree.ride(tandemBikeFromSpec);
+        assertEquals(tandemBikeFromSpec.currentSpeed(), 72);
+    }
 }
