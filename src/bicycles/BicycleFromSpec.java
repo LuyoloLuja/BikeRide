@@ -3,10 +3,11 @@ package bicycles;
 public class BicycleFromSpec extends BicycleBase {
     public BicycleSpecification bicycleSpecification;
 
-    public void BicycleFromSpec(BicycleSpecification bicycleSpecification){
+    public BicycleFromSpec(BicycleSpecification bicycleSpecification){
         this.bicycleSpecification = bicycleSpecification;
     }
 
-    public void accelerate() { changeSpeed(bicycleSpecification.getAccelerationSpeed()); }
-    public void brake() { changeSpeed(bicycleSpecification.getBreakSpeed()); }
+    public void accelerate() { changeSpeed(this.bicycleSpecification.getAccelerationSpeed()); }
+    public void brake() { changeSpeed(this.bicycleSpecification.getBreakSpeed()); }
+    public int currentSpeed() { return super.currentSpeed(); }
 }

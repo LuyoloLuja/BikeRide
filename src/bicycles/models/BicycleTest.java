@@ -1,6 +1,9 @@
 package bicycles.models;
 
 import bicycles.Bicycle;
+import bicycles.BicycleFromSpec;
+import bicycles.BicycleSpecification;
+import bicycles.BikeRide;
 import bicycles.Rides.BikeRideOne;
 import bicycles.Rides.BikeRideThree;
 import bicycles.Rides.BikeRideTwo;
@@ -215,5 +218,16 @@ public class BicycleTest {
 
         bikeRideThree.ride(tandem);
         assertEquals(173, bikeRideThree.getCurrentSpeed());
+    }
+
+//    Tests For Bicycle Specifications
+    @Test
+    public void bikeRideSpecShouldBeRoadBike() {
+        BicycleSpecification roadBikeSpec = new BicycleSpecification(11, -4);
+        Bicycle roadBike = new BicycleFromSpec(roadBikeSpec);
+        BikeRide bikeRide = new BikeRideOne(roadBike);
+
+        bikeRide.ride(roadBike);
+        assertEquals(roadBike.currentSpeed(), 33);
     }
 }
