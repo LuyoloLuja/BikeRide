@@ -11,7 +11,7 @@ public class BikeRideThree {
     @Test
     public void bikeRideThreeShouldBeMountainBike(){
         MountainBike mountainBike = new MountainBike();
-        models.Rides.BikeRideThree bikeRideThree = new models.Rides.BikeRideThree(mountainBike);
+        models.rides.BikeRideThree bikeRideThree = new models.rides.BikeRideThree(mountainBike);
 
         bikeRideThree.ride(mountainBike);
         assertEquals(72, bikeRideThree.getCurrentSpeed());
@@ -19,7 +19,7 @@ public class BikeRideThree {
     @Test
     public void bikeRideThreeShouldBeRoadBike(){
         RoadBike roadBike = new RoadBike();
-        models.Rides.BikeRideThree bikeRideThree = new models.Rides.BikeRideThree(roadBike);
+        models.rides.BikeRideThree bikeRideThree = new models.rides.BikeRideThree(roadBike);
 
         bikeRideThree.ride(roadBike);
         assertEquals(161, bikeRideThree.getCurrentSpeed());
@@ -27,7 +27,7 @@ public class BikeRideThree {
     @Test
     public void bikeRideThreeShouldBeTandem() {
         Tandem tandem = new Tandem();
-        models.Rides.BikeRideThree bikeRideThree = new models.Rides.BikeRideThree(tandem);
+        models.rides.BikeRideThree bikeRideThree = new models.rides.BikeRideThree(tandem);
 
         bikeRideThree.ride(tandem);
         assertEquals(173, bikeRideThree.getCurrentSpeed());

@@ -3,7 +3,7 @@ package specifications;
 import models.Bicycle;
 import models.BicycleType;
 import models.BikeRide;
-import models.Rides.BikeRideTwo;
+import models.rides.BikeRideTwo;
 import models.specifications.BicycleFromSpec;
 import models.specifications.BicycleSpecification;
 import org.junit.jupiter.api.Test;
