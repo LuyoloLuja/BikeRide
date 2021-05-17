@@ -1,11 +1,14 @@
 package bicycles;
 
 public class BicycleSpecification {
-    private int accelerationSpeed;
-    private int breakSpeed;
+    private final int accelerationSpeed;
+    private int brakeSpeed;
+    BicycleType bicycleType;
 
-    public BicycleSpecification(int accelerationSpeed,int brakeSpeed){
+    public BicycleSpecification(int accelerationSpeed, int brakeSpeed, BicycleType bicycleType){
         this.accelerationSpeed = accelerationSpeed;
+        this.brakeSpeed = brakeSpeed;
+        this.bicycleType = bicycleType;
     }
 
     public int getAccelerationSpeed() {
@@ -13,6 +16,6 @@ public class BicycleSpecification {
     }
 
     public int getBreakSpeed() {
-        return breakSpeed;
+        return brakeSpeed;
     }
 }

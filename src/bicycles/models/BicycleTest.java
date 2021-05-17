@@ -10,7 +10,7 @@ import org.junit.platform.commons.util.ModuleUtils;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BicycleTest {
-//    Bike Ride Tests
+//    Road Bike Tests
     @Test
     public void roadBikeShouldAccelerate() {
         RoadBike roadBike = new RoadBike();
@@ -138,6 +138,8 @@ public class BicycleTest {
         tandem.stop();
         assertEquals(0, tandem.currentSpeed());
     }
+
+//    ------------------------------------------------------------------------------------------------------------------
 
 //    Bike Ride One Tests ---------------
     @Test
