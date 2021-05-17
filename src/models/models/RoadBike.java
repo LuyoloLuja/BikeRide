@@ -1,7 +1,7 @@
-package bicycles.models;
+package models.models;
 
-import bicycles.BicycleBase;
-import bicycles.BicycleType;
+import models.BicycleBase;
+import models.BicycleType;
 
 public class RoadBike extends BicycleBase {
 
