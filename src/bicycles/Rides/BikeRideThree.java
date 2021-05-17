@@ -29,10 +29,6 @@ public class BikeRideThree implements BikeRide {
         this.bicycle.brake();
     }
 
-    public void getBicycleType(BicycleType bicycleType) {
-        this.bicycleType = bicycleType;
-    }
-
     public int getCurrentSpeed(){
         return this.bicycle.currentSpeed();
     }
