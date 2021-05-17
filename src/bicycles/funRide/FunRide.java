@@ -25,15 +25,7 @@ public class FunRide {
 //    method to accept rides
     public void accept(Bicycle bicycle){
         if(bicycleRides.size() < maxNumberOfBikes && !bicycleRides.contains((bicycle))){
-
-            if(bicycle instanceof MountainBike) {
-                mountainBike++;
-            } else if(bicycle instanceof RoadBike){
-                roadBike++;
-            } else if (bicycle instanceof Tandem){
-                tandem++;
-            }
-
+            System.out.println("Bike ride added!");
             bicycleRides.add(bicycle);
         } else {
             System.out.println("Can't take anymore bikes, ride is full!");
@@ -43,19 +35,27 @@ public class FunRide {
     // get count for type
     public void getCountForType(BicycleType bicycleType){
         if (bicycleType == BicycleType.RoadBike){
-            // return mountatin typ
-        } else {
-            //
+            System.out.println("Number of rides for Road Bike: ");
+        } else if(bicycleType == BicycleType.MountainBike) {
+            System.out.println("Number of rides for Mountain Bike: " + mountainBike++);
+        }else if(bicycleType == BicycleType.Tandem){
+            System.out.println("Number of rides for Tandem: " + tandem++);;
         }
-//        for(int i = 0; i <= bicycleRides.size(); i++) {
-//            if(bicycleType.equals(bicycleRides.get(i))){
-//
-//            }
-//        }
     }
 
     // get number of bikes on a ride
     public int getEnteredCount(){
         return bicycleRides.size();
+    }
+
+    public static void main(String[] args){
+        FunRide funRide = new FunRide(5);
+        funRide.accept(new RoadBike());
+        funRide.accept(new RoadBike());
+        funRide.accept(new RoadBike());
+        funRide.accept(new RoadBike());
+
+        funRide.getCountForType(BicycleType.RoadBike);
+        System.out.println(funRide.getEnteredCount());
     }
 }
