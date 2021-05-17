@@ -1,8 +1,7 @@
-package bicycles.Rides;
+package models.Rides;
 
-import bicycles.Bicycle;
-import bicycles.BicycleType;
-import bicycles.BikeRide;
+import models.Bicycle;
+import models.BikeRide;
 
 public class BikeRideTwo implements BikeRide {
     public Bicycle bicycle;

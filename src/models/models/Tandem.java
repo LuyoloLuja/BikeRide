@@ -1,9 +1,9 @@
-package bicycles.models;
+package models.models;
 
-import bicycles.BicycleBase;
-import bicycles.BicycleType;
+import models.BicycleBase;
+import models.BicycleType;
 
-class Tandem extends BicycleBase {
+public class Tandem extends BicycleBase {
     public void accelerate() { changeSpeed(12); }
     public void brake() { changeSpeed(-7); }
 
