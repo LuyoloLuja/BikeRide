@@ -2,7 +2,7 @@ package specifications;
 
 import models.Bicycle;
 import models.BicycleType;
-import models.BikeRide;
+import rides.BikeRide;
 import models.rides.BikeRideTwo;
 import models.specifications.BicycleFromSpec;
 import models.specifications.BicycleSpecification;

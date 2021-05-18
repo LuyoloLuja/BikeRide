@@ -12,7 +12,7 @@ public class BicycleFromSpec extends BicycleBase {
 
     public void accelerate() { changeSpeed(this.bicycleSpecification.getAccelerationSpeed()); }
     public void brake() { changeSpeed(this.bicycleSpecification.getBreakSpeed()); }
-    public int currentSpeed() { return super.currentSpeed(); }
+//    public int currentSpeed() { return super.currentSpeed(); }
 
 
     public BicycleType getBicycleType() {

@@ -87,4 +87,27 @@ public class FunRideTests {
 
         assertEquals(3, funRide.getEnteredCount());
     }
+
+    @Test
+    public void shouldNotAddBikesMoreThanMaximumAmount(){
+        FunRide funRide = new FunRide(3);
+
+        BicycleSpecification roadBikeSpecification = new BicycleSpecification(11, -5, BicycleType.RoadBike);
+        BicycleSpecification mountainBikeSpecification = new BicycleSpecification(5, -3, BicycleType.MountainBike);
+        BicycleSpecification tandemSpecification = new BicycleSpecification(12, -7, BicycleType.Tandem);
+
+        BicycleFromSpec roadBikeRide = new BicycleFromSpec(roadBikeSpecification);
+        BicycleFromSpec mountainBikeRide = new BicycleFromSpec(mountainBikeSpecification);
+        BicycleFromSpec roadBikeRideTwo = new BicycleFromSpec(roadBikeSpecification);
+        BicycleFromSpec tandemRide = new BicycleFromSpec(tandemSpecification);
+        BicycleFromSpec mountainBikeRideTwo = new BicycleFromSpec(mountainBikeSpecification);
+
+        funRide.accept(roadBikeRide);
+        funRide.accept(mountainBikeRide);
+        funRide.accept(tandemRide);
+        funRide.accept(roadBikeRideTwo);
+        funRide.accept(mountainBikeRideTwo);
+
+        assertEquals(3, funRide.getEnteredCount());
+    }
 }

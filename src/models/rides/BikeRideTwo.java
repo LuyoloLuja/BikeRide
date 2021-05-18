@@ -1,7 +1,7 @@
 package models.rides;
 
 import models.Bicycle;
-import models.BikeRide;
+import rides.BikeRide;
 
 public class BikeRideTwo implements BikeRide {
     public Bicycle bicycle;

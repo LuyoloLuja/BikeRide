@@ -2,7 +2,7 @@ package models.rides;
 
 import models.Bicycle;
 import models.BicycleType;
-import models.BikeRide;
+import rides.BikeRide;
 
 public class BikeRideThree implements BikeRide {
     public Bicycle bicycle;

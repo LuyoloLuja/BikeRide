@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FunRide {
 //    array list to  add rides
-    List<BicycleFromSpec> bicycleRidesList = new ArrayList<>();
+    private final List<BicycleFromSpec> bicycleRidesList = new ArrayList<>();
     int maxNumberOfBikes;
 
 //    fun ride constructor
@@ -30,8 +30,9 @@ public class FunRide {
     // get count for type
     public int getCountForType(BicycleType bicycleType){
         int counter = 0;
-        for(int i = 0; i < bicycleRidesList.size(); i++) {
-            if(bicycleType.equals(bicycleRidesList.get(i).getBicycleType())){
+
+        for (BicycleFromSpec eachBicycle: bicycleRidesList) {
+            if(eachBicycle.getBicycleType().equals(bicycleType)){
                 counter++;
             }
         }
